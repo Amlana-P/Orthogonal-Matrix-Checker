@@ -10,6 +10,32 @@ input {
   color: inherit;
 }
 
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  font-size: 2rem;
+}
+
+h3 {
+  font-family: sans-serif, Geneva, Tahoma;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  font-size: 1rem;
+}
+
 .form {
   position: absolute;
   top: 50%;
