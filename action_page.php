@@ -6,6 +6,8 @@ if (isset($_POST['submit'])) {
     // receive all input values from the form
     $_SESSION['rows'] = $_POST['rows']; 
     $_SESSION['columns'] = $_POST['columns'];
+} else if(!isset($_SESSION['rows']) || !isset($_SESSION['columns'])){
+    header("location: index.php");
 }
 
 //echo 'Rows: ' . $rows . ' ' . 'Columns: ' . $columns ; 

@@ -11,10 +11,10 @@
 </head>
 <body>
   <h1>Orthogonal Matrix Checker</h1>
-  <h3>Ashutosh Samal 118EE707</h3>
+  <h3>Aradhana Gupta 118EE0288</h3>
   <form class="form" action="action_page.php" method="POST">
-    <input class="form_input" type="number" name="rows" placeholder="Input number of rows" min="1" required>
-    <input class="form_input" type="number" name="columns" placeholder="Input number of columns" min="1" required>
+    <input class="form_input" type="number" name="rows" placeholder="Enter the number of rows" min="1" required>
+    <input class="form_input" type="number" name="columns" placeholder="Enter the number of columns" min="1" required>
     <input class="form_submit" type="submit" name="submit"></input>
   </form>
 </body>

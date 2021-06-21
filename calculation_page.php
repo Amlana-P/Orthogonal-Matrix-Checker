@@ -21,13 +21,7 @@ if (isset($_POST['submit-matrix'])) {
     }
 
 
-    /*
-    for ($i = 0; $i < $rows; $i++) {
-        for ($j = 0; $j < $columns; $j++) {
-            echo $matrix[$i][$j].' ';
-        }
-    }*/
-
+    // Algorithm
     for ($i = 0; $i < $rows ; $i++)  {
         for ($j = 0; $j < $columns; $j++) {
         $transpose[$j][$i] = $matrix[$i][$j];
@@ -69,18 +63,22 @@ if (isset($_POST['submit-matrix'])) {
   }
 
   if ($c != $rows){
-    echo "The matrix isn't orthogonal.\n";
+    echo "<h2>The matrix isn't orthogonal</h2>";
   }
   else{
-    echo "The matrix is orthogonal.\n";
+    echo "<h2>The matrix is orthogonal</h2>";
   }
+
+  session_destroy();
+  unset($_SESSION['rows']);
+  unset($_SESSION['columns']);
 
 }
 
 if (isset($_GET['reset'])) {
-    session_destroy();
-    unset($_SESSION['rows']);
-    unset($_SESSION['columns']);
+    // session_destroy();
+    // unset($_SESSION['rows']);
+    // unset($_SESSION['columns']);
     header("location: index.php");
 }
 
@@ -91,9 +89,15 @@ if (isset($_GET['reset'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orthogonal Matrix Checker</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Orthogonal Matrix Checker</title>    
 </head>
 <body>
-<p><a href="calculation_page.php?reset='1'" style="color: red;">Reset</a> </p>
+<a href="calculation_page.php?reset='1'">
+  <button class="btn btn-warning button">
+      Try again ?
+  </button>
+</a>
 </body>
 </html>
